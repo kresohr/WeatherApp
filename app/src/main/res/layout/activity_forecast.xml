@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:src="@drawable/highlight"
+        app:layout_constraintBottom_toBottomOf="@id/text_date_1"
+        app:layout_constraintEnd_toEndOf="@id/text_max_temperature"
+        app:layout_constraintStart_toStartOf="@id/text_date"
+        app:layout_constraintTop_toTopOf="@id/text_date_1" />
+
+    <TextView
+        android:id="@+id/text_forecasted_city"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_large"
+        android:paddingBottom="@dimen/margin_large"
+        android:text="Zagreb"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_large"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--  Column Header  -->
+
+    <TextView
+        android:id="@+id/text_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:paddingHorizontal="10dp"
+        android:text="Date"
+        android:textAlignment="center"
+        android:textSize="@dimen/text_normal"
+        app:layout_constraintEnd_toStartOf="@id/text_avg_weather"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_forecasted_city" />
+
+    <TextView
+        android:id="@+id/text_avg_weather"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:paddingHorizontal="10dp"
+        android:text="AVG. Weather"
+        android:textAlignment="center"
+        android:textSize="@dimen/text_normal"
+        app:layout_constraintEnd_toStartOf="@id/text_min_temperature"
+        app:layout_constraintStart_toEndOf="@id/text_date"
+        app:layout_constraintTop_toBottomOf="@id/text_forecasted_city" />
+
+    <TextView
+        android:id="@+id/text_min_temperature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:paddingHorizontal="10dp"
+        android:text="Min. Temp"
+        android:textAlignment="center"
+        android:textSize="@dimen/text_normal"
+        app:layout_constraintEnd_toStartOf="@id/text_max_temperature"
+        app:layout_constraintStart_toEndOf="@id/text_avg_weather"
+        app:layout_constraintTop_toBottomOf="@id/text_forecasted_city" />
+
+    <TextView
+        android:id="@+id/text_max_temperature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:paddingHorizontal="10dp"
+        android:text="Max. Temp"
+        android:textAlignment="center"
+        android:textSize="@dimen/text_normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/text_min_temperature"
+        app:layout_constraintTop_toBottomOf="@id/text_forecasted_city" />
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </androidx.cardview.widget.CardView>
+    <!--  Day 1  -->
+    <TextView
+        android:id="@+id/text_date_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_normal"
+        android:text="11/11"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@id/text_date"
+        app:layout_constraintStart_toStartOf="@id/text_date"
+        app:layout_constraintTop_toBottomOf="@id/text_date" />
+    <!--  Day 2  -->
+    <TextView
+        android:id="@+id/text_date_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_large"
+        android:text="12/11"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@id/text_date_1"
+        app:layout_constraintStart_toStartOf="@id/text_date_1"
+        app:layout_constraintTop_toBottomOf="@id/text_date_1" />
+    <!--  Day 3  -->
+    <TextView
+        android:id="@+id/text_date_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_large"
+        android:text="13/11"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@id/text_date_2"
+        app:layout_constraintStart_toStartOf="@id/text_date_2"
+        app:layout_constraintTop_toBottomOf="@id/text_date_2" />
+    <!--  Day 4  -->
+    <TextView
+        android:id="@+id/text_date_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_large"
+        android:text="14/11"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@id/text_date_3"
+        app:layout_constraintStart_toStartOf="@id/text_date_3"
+        app:layout_constraintTop_toBottomOf="@id/text_date_3" />
+
+    <!-- Weather Icon 1 -->
+    <ImageView
+        android:id="@+id/icon_weather_1"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/ic_sun"
+        app:layout_constraintBottom_toBottomOf="@id/text_date_1"
+        app:layout_constraintEnd_toEndOf="@id/text_avg_weather"
+        app:layout_constraintStart_toStartOf="@id/text_avg_weather"
+        app:layout_constraintTop_toTopOf="@id/text_date_1" />
+
+    <!-- Weather Icon 2 -->
+    <ImageView
+        android:id="@+id/icon_weather_2"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/ic_rain"
+        app:layout_constraintBottom_toBottomOf="@id/text_date_2"
+        app:layout_constraintEnd_toEndOf="@id/text_avg_weather"
+        app:layout_constraintStart_toStartOf="@id/text_avg_weather"
+        app:layout_constraintTop_toTopOf="@id/text_date_2" />
+
+    <!-- Weather Icon 3 -->
+    <ImageView
+        android:id="@+id/icon_weather_3"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/ic_snow"
+        app:layout_constraintBottom_toBottomOf="@id/text_date_3"
+        app:layout_constraintEnd_toEndOf="@id/text_avg_weather"
+        app:layout_constraintStart_toStartOf="@id/text_avg_weather"
+        app:layout_constraintTop_toTopOf="@id/text_date_3" />
+
+    <!-- Weather Icon 4 -->
+    <ImageView
+        android:id="@+id/icon_weather_4"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/ic_thunder"
+        app:layout_constraintBottom_toBottomOf="@id/text_date_4"
+        app:layout_constraintEnd_toEndOf="@id/text_avg_weather"
+        app:layout_constraintStart_toStartOf="@id/text_avg_weather"
+        app:layout_constraintTop_toTopOf="@id/text_date_4" />
+
+    <!-- Min Temp 1 -->
+    <TextView
+        android:id="@+id/text_min_temperature_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="21 °C"
+        app:layout_constraintBottom_toBottomOf="@id/text_date_1"
+        app:layout_constraintEnd_toEndOf="@id/text_min_temperature"
+        app:layout_constraintStart_toStartOf="@id/text_min_temperature"
+        app:layout_constraintTop_toTopOf="@id/text_date_1" />
+
+    <!-- Min Temp 2 -->
+    <TextView
+        android:id="@+id/text_min_temperature_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="22 °C"
+        app:layout_constraintBottom_toBottomOf="@id/text_date_2"
+        app:layout_constraintEnd_toEndOf="@id/text_min_temperature"
+        app:layout_constraintStart_toStartOf="@id/text_min_temperature"
+        app:layout_constraintTop_toTopOf="@id/text_date_2" />
+    <!-- Min Temp 3 -->
+    <TextView
+        android:id="@+id/text_min_temperature_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="21 °C"
+        app:layout_constraintBottom_toBottomOf="@id/text_date_3"
+        app:layout_constraintEnd_toEndOf="@id/text_min_temperature"
+        app:layout_constraintStart_toStartOf="@id/text_min_temperature"
+        app:layout_constraintTop_toTopOf="@id/text_date_3" />
+    <!-- Min Temp 4 -->
+    <TextView
+        android:id="@+id/text_min_temperature_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="21 °C"
+        app:layout_constraintBottom_toBottomOf="@id/text_date_4"
+        app:layout_constraintEnd_toEndOf="@id/text_min_temperature"
+        app:layout_constraintStart_toStartOf="@id/text_min_temperature"
+        app:layout_constraintTop_toTopOf="@id/text_date_4" />
+
+    <!-- Max Temp 1 -->
+    <TextView
+        android:id="@+id/text_max_temperature_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="22 °C"
+        app:layout_constraintBottom_toBottomOf="@id/text_date_1"
+        app:layout_constraintEnd_toEndOf="@id/text_max_temperature"
+        app:layout_constraintStart_toStartOf="@id/text_max_temperature"
+        app:layout_constraintTop_toTopOf="@id/text_date_1" />
+    <!-- Max Temp 2 -->
+    <TextView
+        android:id="@+id/text_max_temperature_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="22 °C"
+        app:layout_constraintBottom_toBottomOf="@id/text_date_2"
+        app:layout_constraintEnd_toEndOf="@id/text_max_temperature"
+        app:layout_constraintStart_toStartOf="@id/text_max_temperature"
+        app:layout_constraintTop_toTopOf="@id/text_date_2" />
+
+    <!-- Max Temp 1 -->
+    <TextView
+        android:id="@+id/text_max_temperature_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="22 °C"
+        app:layout_constraintBottom_toBottomOf="@id/text_date_3"
+        app:layout_constraintEnd_toEndOf="@id/text_max_temperature"
+        app:layout_constraintStart_toStartOf="@id/text_max_temperature"
+        app:layout_constraintTop_toTopOf="@id/text_date_3" />
+
+    <!-- Max Temp 1 -->
+    <TextView
+        android:id="@+id/text_max_temperature_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="22 °C"
+        app:layout_constraintBottom_toBottomOf="@id/text_date_4"
+        app:layout_constraintEnd_toEndOf="@id/text_max_temperature"
+        app:layout_constraintStart_toStartOf="@id/text_max_temperature"
+        app:layout_constraintTop_toTopOf="@id/text_date_4" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
