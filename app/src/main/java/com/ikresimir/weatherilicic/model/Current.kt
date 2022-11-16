@@ -3,7 +3,7 @@ package com.ikresimir.weatherilicic.model
 data class Current(
     @Transient val clouds: Int,
     @Transient val dew_point: Double,
-    @Transient val dt: Int,
+    val dt: Int,
     @Transient val feels_like: Double,
     @Transient val humidity: Int,
     @Transient val pressure: Int,
