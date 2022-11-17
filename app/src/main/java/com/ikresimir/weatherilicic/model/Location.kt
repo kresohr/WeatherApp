@@ -6,6 +6,6 @@ data class Location(
     val hourly: List<Hourly>,
     val lat: Double,
     val lon: Double,
-    @Transient val timezone: String,
-    @Transient val timezone_offset: Int
+    @Transient val timezone: String?,
+    @Transient val timezone_offset: Int?
 )
