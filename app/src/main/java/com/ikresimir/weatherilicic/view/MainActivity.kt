@@ -1,15 +1,14 @@
 package com.ikresimir.weatherilicic.view
 
-import android.location.Geocoder
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.appcompat.widget.SearchView
 import androidx.lifecycle.ViewModelProvider
 import com.ikresimir.weatherilicic.R
 import com.ikresimir.weatherilicic.viewmodel.MainViewModel
-import java.util.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -20,6 +19,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var textCity: TextView
     lateinit var textSkyState: TextView
     lateinit var imageWeather: ImageView
+    lateinit var searchCity: SearchView
     lateinit var viewModel: MainViewModel
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,6 +34,7 @@ class MainActivity : AppCompatActivity() {
         textDegrees = findViewById(R.id.text_degrees)
         textSkyState = findViewById(R.id.text_sky_state)
         imageWeather = findViewById(R.id.image_weather)
+        searchCity = findViewById(R.id.search)
 
         viewModel = ViewModelProvider(this).get(MainViewModel::class.java)
         viewModel.getWeather().observe(this) {
@@ -41,28 +42,14 @@ class MainActivity : AppCompatActivity() {
             textMinValue.text = it.daily[0].temp.min.toInt().toString() + " °C"
             textMaxValue.text = it.daily[0].temp.max.toInt().toString() + " °C"
             textSkyState.text = it.current.weather[0].main
-            textCity.text = getCityName(it.lat,it.lon)
+            textCity.text = viewModel.getCityName()
             setCurrentWeatherImage(it.current.weather[0].main)
         }
     }
 
-    private fun getCityName(lat: Double,long: Double):String{
-        var cityName: String?
-        val geoCoder = Geocoder(this, Locale.getDefault())
-        val address = geoCoder.getFromLocation(lat,long,1)
-        cityName = address[0].adminArea
-        if (cityName == null){
-            cityName = address[0].locality
-            if (cityName == null){
-                cityName = address[0].subAdminArea
-            }
-        }
-        return cityName
-    }
-
     private fun setCurrentWeatherImage(weatherDescription: String){
         val isNight = viewModel.checkIfNight()
-
+        //TO DO: Add more weather modes "Fog, Sandstorm... etc"
         if(isNight){
             when(weatherDescription){
                 "Thunderstorm" -> imageWeather.setImageResource(R.drawable.ic_thunder_night)
