@@ -3,7 +3,6 @@ package com.ikresimir.weatherilicic.utility
 import androidx.room.TypeConverter
 import com.google.gson.Gson
 import com.ikresimir.weatherilicic.model.Current
-import com.ikresimir.weatherilicic.model.CurrentList
 import com.ikresimir.weatherilicic.model.DailyList
 import com.ikresimir.weatherilicic.model.HourlyList
 
