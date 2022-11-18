@@ -7,118 +7,17 @@
         android:layout_height="match_parent"
         tools:context=".view.MainActivity">
 
-        <androidx.appcompat.widget.SearchView
-            android:id="@+id/search"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:layout_marginHorizontal="70dp"
-            app:iconifiedByDefault="false"
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/fragmentContainerView"
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:defaultNavHost="true"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:queryHint="Search for a city..." />
-
-        <TextView
-            android:id="@+id/text_sky_state"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Sunny"
-            android:textColor="@color/light_gray"
-            android:textSize="22sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/image_weather" />
-
-        <ImageView
-            android:id="@+id/image_weather"
-            android:layout_width="185dp"
-            android:layout_height="185dp"
-            android:src="@drawable/ic_sun"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/text_degrees" />
-
-        <TextView
-            android:id="@+id/text_min"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="10dp"
-            android:text="MIN:"
-            android:textSize="22sp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toEndOf="@id/text_sky_state"
-            app:layout_constraintTop_toBottomOf="@id/text_sky_state" />
-
-        <TextView
-            android:id="@+id/text_min_value"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="X °C"
-            android:textSize="22sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/image_weather"
-            app:layout_constraintTop_toTopOf="@id/text_min" />
-
-        <TextView
-            android:id="@+id/text_max"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="10dp"
-            android:text="MAX:"
-            android:textSize="22sp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toEndOf="@id/text_sky_state"
-            app:layout_constraintTop_toBottomOf="@id/text_min" />
-
-        <TextView
-            android:id="@+id/text_max_value"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="X °C"
-            android:textSize="22sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/image_weather"
-            app:layout_constraintTop_toBottomOf="@id/text_min_value" />
-
-        <TextView
-            android:id="@+id/text_city"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/margin_large"
-            android:text="City"
-            android:textSize="26sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/search" />
-
-        <TextView
-            android:id="@+id/text_degrees"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="X °C"
-            android:textSize="36sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/text_city" />
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerView"
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:orientation="horizontal"
-            app:layout_constraintTop_toBottomOf="@id/text_max" />
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnShowForecast"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/light_gray"
-            android:text="4-day forecast"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/recyclerView" />
-
+            app:navGraph="@navigation/nav_graph" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
