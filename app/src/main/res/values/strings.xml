@@ -1,3 +1,26 @@
 <resources>
     <string name="app_name">Weather Ilicic</string>
+    <string name="text_placeholder_hour">16:00</string>
+    <string name="text_placeholder_temperature">°</string>
+    <string name="text_placeholder_date">11/11</string>
+    <string name="text_placeholder_connection_required">Internet connection required.\nTurn on internet and search for a city.</string>
+    <string name="text_placeholder_error_description">Your location cannot be fetched. Please connect to the internet and make sure to enable location settings.</string>
+    <string name="text_placeholder_header">Oops!</string>
+    <string name="text_button_okay">okay</string>
+    <string name="text_placeholder_4day_forecast">4-day forecast</string>
+    <string name="text_max">MAX:</string>
+    <string name="text_min">MIN:</string>
+    <string name="text_animation_description">Let us check the weather for you...</string>
+    <string name="text_search_hint">Search for a city...</string>
+    <string name="text_header_location_dialog">Location permission</string>
+    <string name="text_description_location_dialog">Want to do a quick check on weather forecast in your area? We need your location permission.</string>
+    <string name="button_text_sure">sure</string>
+    <string name="button_text_nothanks">no thanks</string>
+    <string name="text_notification_header_dialog">Notification reminder</string>
+    <string name="text_notification_description_dialog">Get a notification 2 hours before bad weather starts.</string>
+    <string name="text_placeholder_city">City</string>
+    <string name="text_column_header_date">Date</string>
+    <string name="text_column_header_weather">Weather</string>
+    <string name="text_column_header_min_temp">Min. Temp</string>
+    <string name="text_column_header_max_temp">Max. Temp</string>
 </resources>
