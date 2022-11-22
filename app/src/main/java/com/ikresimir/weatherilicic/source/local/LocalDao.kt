@@ -6,7 +6,6 @@ import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import com.ikresimir.weatherilicic.model.UserData
 
-// TO DO: Change "UserData" and "user_data" to "WeatherData"/"weather_data", getLocationData()->getWeatherData(), insertLocationData()->insertWeatherData()
 @Dao
 abstract class LocalDao {
 
