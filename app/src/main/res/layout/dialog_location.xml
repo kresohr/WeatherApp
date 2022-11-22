@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottieAnimationMaps"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        app:lottie_speed="1.5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/anim_maps" />
+
+    <TextView
+        android:id="@+id/textLocationDialogHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_large"
+        android:text="@string/text_header_location_dialog"
+        android:textAlignment="center"
+        android:textColor="@color/light_black"
+        android:textSize="@dimen/text_large"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/lottieAnimationMaps" />
+
+    <TextView
+        android:id="@+id/textLocationDialogDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_xlarge"
+        android:layout_marginTop="@dimen/margin_large"
+        android:text="@string/text_description_location_dialog"
+        android:textAlignment="center"
+        android:textSize="@dimen/text_normal"
+        app:layout_constraintTop_toBottomOf="@id/textLocationDialogHeader" />
+
+    <Button
+        android:id="@+id/btnSure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_xlarge"
+        android:text="@string/button_text_sure"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textLocationDialogDescription" />
+
+    <Button
+        android:id="@+id/btnNoThanks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/light_gray"
+        android:text="@string/button_text_nothanks"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnSure"
+        android:layout_marginBottom="@dimen/margin_xlarge"/>
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/margin_xlarge"
+        app:layout_constraintTop_toBottomOf="@id/btnNoThanks"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
