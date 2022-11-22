@@ -1,9 +1,10 @@
 package com.ikresimir.weatherilicic.model
 
+
 data class Daily(
     @Transient val clouds: Int,
     @Transient val dew_point: Double,
-    @Transient val dt: Int,
+    val dt: Int,
     @Transient val feels_like: FeelsLike,
     @Transient val humidity: Int,
     @Transient val moon_phase: Double,
